@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html lang="pl" dir="ltr">
+
+<style>
+    .jumbotron {
+        margin-bottom: 0px;
+        background: #000000
+        
+    }
+</style>
+<body>
+  {% include "quiz/navbar.html" %}
+<br>
+<section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center bg-dark text-white">
+    <div class="container text-center">
+        <img src="/static/image/Lgold.png" alt="Lgold" height="290px" width="441px" />
+        <h1 class="display-1 text-info">Gold Trust</h1>
+        <p class="display-4 d-none d-sm-block">Szkolenia dla Ciebie i twoich pracowników.</p>
+        <p class="lead">Organizujemy profesjonalne szkolenia.</p>
+
+
+
+        <p class="lead">Zapisz się i rozpocznij szkolenie dla siebie lub swoich pracowników!</p>
+        <p><strong> Rozpocznij swoją przygodę edukacyjną tutaj:</strong></p>
+        <a href="/student/studentsignup" class="btn btn-lg btn-info" style="padding-right: 35px;"><i class="fa fa-user-plus" aria-hidden="true"></i> Zapisz się</a>
+
+        <br><br><br>
+    </div>  
+</section>
+  {% include "quiz/footer.html" %}
+
+
+</body>
+
+</html>

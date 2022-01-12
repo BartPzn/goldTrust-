@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html lang="pl" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  {% include "quiz/navbar.html" %}
+  <br><br>
+
+  <center>
+    
+
+    <form method="POST" autocomplete="off">
+      <!-- Very Important csrf Token -->
+      {% csrf_token %}
+      <div class="form-group bg-dark text-white">
+        <p>
+        <h3>{{ form.as_p }}</h3>
+        </p>
+        <br>
+        <input type="submit" value="Wyślij" class='btn btn-primary btn-lg'>
+      </div>
+    </form>
+  </center>
+
+  {% include "quiz/footer.html" %}
+</body>
+
+</html>

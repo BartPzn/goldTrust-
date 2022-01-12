@@ -1,0 +1,58 @@
+﻿{% extends 'student/studentbase.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+</head>
+<br><br>
+<div class="container my-4">
+    <div class="jumbotron">
+
+	      <h3 class="text-info text-center">Przed rozpoczęciem szkolenia przeczytaj zasady!</h3>
+
+        <div class="row">
+
+            <div class="card border-info mx-4 my-4">
+                <div class="card-body text-info">
+
+                    <h4 class="card-title">Szczegóły szkolenia :</h4>
+                    <p class="card-text">
+                        </p><ul style="list-style:decimal;">
+                            <li>Nazwa szkolenia : {{course.course_name}}</li>
+                            <li>Liczba pytań : {{total_questions}}</li>
+                            <li>Liczba punktów do zdobycia : {{total_marks}}</li>
+                        </ul>
+                    <p></p>
+
+
+
+                    <h4 class="card-title">Zasady :</h4>
+                    <p class="card-text">
+                        </p><ul style="list-style:decimal;">
+                            <li>Wszystkie pytania mają kilka odpowiedzi</li>
+                            <li><span class="text-danger">Tylko jedna odpowiedź jest poprawna</span></li>
+                            <li>Każde pytanie ma inną punktację.
+                            </li>
+                
+                            <li>Spróbuj odpowiedzieć najszybciej jak potrafisz.</li>
+                            <li>Jeśli naciśniesz odśwież lub wrócisz do poprzedniej strony, pojawi się nowe pytanie, a pytanie, na którym byłeś, zostanie policzone jako próba odpowiedzi.</li>
+                            <li>Pytania pojawiają się losowo każdemu Studentowi.</li>
+                            <li>Otrzymasz swoją ocenę natychmiast po przesłaniu odpowiedzi.</li>
+                        </ul>
+                    <p></p>
+                    <a href="{% url 'start-exam' course.id  %}" class="btn btn-info">Zacznij</a>
+                </div>  
+                <div class="card-footer">Powodzenia!</div>  
+            </div>  
+        </div>  
+
+    </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock content %}

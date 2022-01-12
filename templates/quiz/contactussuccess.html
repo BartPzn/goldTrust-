@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pl" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <style media="screen">
+    .jumbotron {
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  {% include "quiz/navbar.html" %}
+  <br><br>
+  <div class="jumbotron">
+    <h1 class="display-4">Twoja wiadomość została wysłana poprawnie !</h1>
+    <p class="lead">W krótce odpowiemy na wiadomość</p>
+    <hr class="my-4">
+    <p>Sprawdź więcej na naszej stronie !</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/" role="button">Główna Strona</a>
+    </p>
+  </div>
+
+  {% include "quiz/footer.html" %}
+</body>
+
+</html>
